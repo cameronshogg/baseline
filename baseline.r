@@ -24,6 +24,12 @@ boxplot(random$y300~random$dayshift,
         main = "Boxplot of Camshaft Straightness by Day and Shift",
         xlab = "Day and Shift", ylab = "Camshaft Straightness", col="aquamarine3")
 
+random$hour <- c(rep(seq(from = 1, to = 24, by = 1),5))
+
+boxplot(random$y300~random$hour, 
+        main = "Boxplot of Camshaft Straightness by Hour",
+        xlab = "Hour", ylab = "Camshaft Straightness", col="darkgoldenrod2")
+
 range(random$y300)
 
 summary(random$y300)
